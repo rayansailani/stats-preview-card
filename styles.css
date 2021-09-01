@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsl(233, 47%, 7%);
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* display: grid;
+  place-items: center; */
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 67.625rem;
+  background: hsl(244, 38%, 16%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* right side image styling */
+
+.right-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.4;
+}
+.right-image {
+  background: hsl(277, 64%, 61%);
+}
+
+/* left side styling  */
+.card-left-view {
+  padding: 3.4rem;
+}
+
+.text-content h2 {
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.6rem;
+}
+.text-content .insights {
+  color: hsl(277, 64%, 61%);
+}
+.text-content .subtitle {
+  padding-right: 2rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 3rem;
+}
+.data-content {
+  margin-top: 6.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.box h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.box p {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* media queries at work */
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+    overflow: visible;
+  }
+  body {
+    margin: 2rem 1rem 2rem 1rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 25rem;
+  }
+  .card-left-view {
+    padding: 1.8rem;
+  }
+  .text-content {
+    text-align: center;
+  }
+  .data-content {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    margin: 1rem;
+  }
+  .text-content .subtitle {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
